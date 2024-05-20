@@ -1,0 +1,9 @@
+{
+  "watch": ["src/"],
+  "ext": "ts,js,json,d.ts",
+  "ignore": ["node_modules"],
+  "exec": "ts-node -r tsconfig-paths/register --files ./src/pet-server.ts",
+  "restartable": "rs",
+  "env": {
+  }
+}

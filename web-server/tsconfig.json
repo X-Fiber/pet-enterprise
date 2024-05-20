@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "newLine": "lf",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitOverride": false,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "rootDir": ".",
+    "paths": {
+      "~business-logic": ["./src/business-logic/index.ts"],
+      "~client-types": ["../types/web-client/index.d.ts"],
+      "~server-types": ["../types/web-server/index.d.ts"]
+    }
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "dist",
+    ".test-development/index.ts"
+  ],
+}

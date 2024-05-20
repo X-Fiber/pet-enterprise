@@ -1,0 +1,7 @@
+{
+  "adapters": {
+    "http": {
+      "enable": true
+    }
+  }
+}

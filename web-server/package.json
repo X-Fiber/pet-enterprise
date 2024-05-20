@@ -1,0 +1,20 @@
+{
+  "name": "@x-fiber/pet-enterprise-backend",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon"
+  },
+  "dependencies": {
+    "proton": "file:../../proton/dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "description": ""
+}
