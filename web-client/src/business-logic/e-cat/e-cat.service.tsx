@@ -1,4 +1,4 @@
-import { setService } from "display";
+import { setService } from "~packages";
 import { CatCatAggRegistry } from "./CatCatAgg";
 
 import type { Services } from "~client-types";

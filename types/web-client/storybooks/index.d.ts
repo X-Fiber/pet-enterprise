@@ -1,7 +1,7 @@
 export type Storybooks = "NextUI";
 
 export namespace NextUI {
-  export type Spaces = "Buttons" | "Inputs" | "Forms";
+  export type Spaces = "Buttons" | "Inputs" | "Forms" | "Labels";
 
   export type Buttons = "Button";
 
@@ -28,9 +28,20 @@ export namespace NextUI {
     button: {
       name: string;
     };
+    errors?: Array<{
+      message?: string;
+    }>;
     inputs: Array<{
       register: any;
       name: string;
+      placeholder: string;
     }>;
+  };
+
+  export type Labels = "BaseLabel";
+
+  export type BaseLabelProps = {
+    message: string;
+    className?: string;
   };
 }

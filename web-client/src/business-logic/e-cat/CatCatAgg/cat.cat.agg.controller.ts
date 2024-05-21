@@ -1,9 +1,9 @@
-import { setController } from "~business-logic";
+import { setController } from "~packages";
 
 import type { NCatCatAgg } from "~client-types";
 import type { NCatCatAgg as NSCatCatAgg, NECat, Services } from "~server-types";
 
-export const controller = setController<NCatCatAgg.Routines>({
+export const CatCatAggController = setController<NCatCatAgg.Routines>({
   sendCat: {
     scope: "public",
     handler: async (

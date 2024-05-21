@@ -1,7 +1,16 @@
-import { NSCatCatAgg } from "~server-types";
+import type { NCatCatAgg as NSCatCatAgg } from "../../../web-server";
 
 export namespace NCatCatAgg {
-  export type Forms = "CreateForm" | "CatInfo";
+  export type Views = "CreateForm" | "CatCounter";
+
+  export type CreateFormProps = {
+    className?: string;
+  };
+
+  export type CatCounterProps = {
+    className?: string;
+  };
+
   export type Routines = "sendCat" | "getCat";
 
   export type Store = {
@@ -18,5 +27,15 @@ export namespace NCatCatAgg {
     getCat: (
       name: NSCatCatAgg.CatStructure["name"]
     ) => Promise<NSCatCatAgg.CatStructure>;
+  };
+
+  export type Dictionary = {
+    buttons: {
+      create: string;
+    };
+  };
+
+  export type Validator = {
+    setPet: NSCatCatAgg.CatStructure;
   };
 }

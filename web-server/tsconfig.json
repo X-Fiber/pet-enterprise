@@ -3,7 +3,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
-    "sourceMap": true,
     "esModuleInterop": true,
     "newLine": "lf",
     "forceConsistentCasingInFileNames": true,
@@ -12,19 +11,18 @@
     "strictNullChecks": true,
     "noImplicitOverride": false,
     "skipLibCheck": true,
-    "target": "ESNext",
+    "target": "ES2020",
     "module": "CommonJS",
-    "outDir": "./dist",
+    "outDir": "./dist/src",
     "baseUrl": "./",
-    "rootDir": ".",
+    "rootDir": "./src",
     "paths": {
       "~business-logic": ["./src/business-logic/index.ts"],
       "~client-types": ["../types/web-client/index.d.ts"],
-      "~server-types": ["../types/web-server/index.d.ts"]
+      "~server-types": ["../types/web-server/index.d.ts"],
+      "~packages": ["./src/packages.ts"],
     }
   },
   "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules", "dist",
-    ".test-development/index.ts"
-  ],
+  "exclude": ["node_modules", "dist"],
 }

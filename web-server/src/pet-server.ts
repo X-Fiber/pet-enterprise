@@ -1,4 +1,4 @@
-import { initiator, setServices } from "proton";
+import { initiator, setServices } from "~packages";
 import { ECatService } from "~business-logic";
 
 setServices([ECatService]);

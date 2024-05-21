@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "module": "ESNext",
-    "target": "ESNext",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "outDir": "./dist",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,24 +17,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "./",
+    "rootDir": "./src",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "~business-logic": [
-        "./src/business-logic/index.ts"
-      ],
-      "~storybooks": [
-        "./src/storybooks/index.ts"
-      ],
-      "~client-types": [
-        "../types/web-client/index.d.ts"
-      ],
-      "~server-types": [
-        "../types/web-server/index.d.ts"
-      ]
+      "~business-logic": ["./src/business-logic/index.ts"],
+      "~storybooks": ["./src/storybooks/index.ts"],
+      "~client-types": ["../types/web-client/index.d.ts"],
+      "~server-types": ["../types/web-server/index.d.ts"],
+      "~packages": ["./src/packages.ts"]
     },
     "forceConsistentCasingInFileNames": true
   },

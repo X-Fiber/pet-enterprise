@@ -1,4 +1,4 @@
-import { setService } from "proton";
+import { setService } from "~packages";
 import { CatCatAggRegistry } from "./CatCatAgg/cat.cat.agg.registry";
 
 import type { Services } from "~server-types";

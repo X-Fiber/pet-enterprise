@@ -1,12 +1,11 @@
 import React from "react";
-import { setComponent } from "~business-logic";
-import { Button as NextUIButton } from "@nextui-org/react";
+import { Button as NextUIButton, setComponent } from "~packages";
 
 import type { NextUI } from "~client-types";
 
-export const Button = setComponent<NextUI.Buttons>(
+export const Button = setComponent<NextUI.Buttons, NextUI.ButtonProps>(
   "Button",
-  (props: NextUI.ButtonProps) => {
+  (props) => {
     return (
       <NextUIButton
         color={"primary"}

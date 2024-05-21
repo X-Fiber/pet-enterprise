@@ -1,12 +1,12 @@
-import { setStore } from "~business-logic";
+import { setStore } from "~packages";
 
 import type { NCatCatAgg } from "~client-types";
 import type { NCatCatAgg as NSCatCatAgg } from "~server-types";
 
-export const store = setStore<NCatCatAgg.Store>({
+export const CatCatAggStore = setStore<NCatCatAgg.Store>({
   storage: "localStorage",
   persistence: "persist",
-  skipHydration: false,
+  skipHydration: true,
   version: 1,
   actions: (setState) => {
     return {

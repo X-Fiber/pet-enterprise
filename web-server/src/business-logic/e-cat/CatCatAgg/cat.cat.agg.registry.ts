@@ -1,4 +1,4 @@
-import { setRegistry } from "proton";
+import { setRegistry } from "~packages";
 import { CatCatAggRouter } from "./cat.cat.agg.router";
 
 import { NECat } from "~server-types";

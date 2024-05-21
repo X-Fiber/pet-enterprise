@@ -1,9 +1,9 @@
-import { ApiResponse, setRouter, StatusCode } from "proton";
+import { ApiResponse, setRouter, StatusCode } from "~packages";
 
-import type { ApiRequest } from "proton";
+import type { ApiRequest } from "~packages";
 import type { NCatCatAgg } from "~server-types";
 
-const cats: Array<{ name: string; age: number }> = [];
+const cats: Array<NCatCatAgg.CatStructure> = [];
 
 export const CatCatAggRouter = setRouter<NCatCatAgg.Routes>({
   cat: {
@@ -30,42 +30,6 @@ export const CatCatAggRouter = setRouter<NCatCatAgg.Routes>({
           data: {
             catCount: cats.length,
           },
-        };
-      },
-    },
-    GET: {
-      params: [
-        {
-          name: "catName",
-          scope: "required",
-        },
-      ],
-      handler: async (
-        request: ApiRequest<void, NCatCatAgg.GetCateAP["params"]>,
-        agents,
-        context
-      ): Promise<
-        ApiResponse<NCatCatAgg.GetCateAP["result"] | NCatCatAgg.GetCateAP["nf"]>
-      > => {
-        const cat = cats.find((c) => c.name === request.params.catName);
-
-        console.log(request.params);
-        if (!cat) {
-          return {
-            format: "json",
-            type: "exception",
-            data: {
-              code: "0001.0001",
-              message: "Cat not found",
-            },
-          };
-        }
-
-        return {
-          format: "json",
-          type: "ok",
-          statusCode: StatusCode.SUCCESS,
-          data: cat,
         };
       },
     },

@@ -12,15 +12,4 @@ export namespace NCatCatAgg {
       catCount: number;
     };
   };
-
-  export type GetCateAP = {
-    params: {
-      catName: string;
-    };
-    nf: {
-      code: string;
-      message: string;
-    };
-    result: CatStructure;
-  };
 }

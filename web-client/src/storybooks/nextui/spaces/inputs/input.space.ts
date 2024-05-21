@@ -1,4 +1,4 @@
-import { setSpace } from "~business-logic";
+import { setSpace } from "~packages";
 import { StandardInput } from "./StandardInput";
 
 import type { NextUI } from "~client-types";

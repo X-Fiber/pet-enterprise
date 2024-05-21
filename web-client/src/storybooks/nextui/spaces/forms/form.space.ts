@@ -1,4 +1,4 @@
-import { setSpace } from "~business-logic";
+import { setSpace } from "~packages";
 import { BaseForm } from "./Form";
 
 import type { NextUI } from "~client-types";
