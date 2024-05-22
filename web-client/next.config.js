@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  env: {
-    HOST: "0.0.0.0",
-  },
-};
+const nextConfig = {};
 
 module.exports = nextConfig;

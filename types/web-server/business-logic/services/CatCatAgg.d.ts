@@ -12,4 +12,9 @@ export namespace NCatCatAgg {
       catCount: number;
     };
   };
+
+  export type Events = "cat:notification";
+  export type CatNotifyPayload = {
+    message: string;
+  };
 }

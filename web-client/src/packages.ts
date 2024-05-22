@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 export {
   initiator,
   setServices,
+  setClientType,
   View,
   setView,
   setStorybooks,

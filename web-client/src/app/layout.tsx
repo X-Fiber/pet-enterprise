@@ -4,6 +4,7 @@ import "./globals.css";
 import { initiator, setServices, setStorybooks } from "~packages";
 import { eCat } from "~business-logic";
 import { NextUiStorybook } from "~storybooks";
+import { setClientType } from "~packages";
 
 export default function RootLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootLayout({
 }>) {
   setStorybooks([NextUiStorybook]);
   setServices([eCat]);
+  setClientType("NextJS");
 
   initiator.start();
 

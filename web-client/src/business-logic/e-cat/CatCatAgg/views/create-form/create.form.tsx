@@ -55,6 +55,15 @@ export const CatCatAggCreateForm = setView<
     }
   };
 
+  agents.fnAgent.ws.sendToService<NSCatCatAgg.CatNotifyPayload>({
+    service: "E-Cat",
+    domain: "CatCatAgg",
+    event: "cat:notification",
+    data: {
+      message: "New Cat",
+    },
+  });
+
   return (
     <section className={styles.section}>
       <form onSubmit={handleSubmit(onSubmit)}>

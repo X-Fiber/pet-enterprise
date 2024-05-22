@@ -1,5 +1,4 @@
 "use client";
-
 import { Component, View } from "~packages";
 import styles from "./page.module.scss";
 
